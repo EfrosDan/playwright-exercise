@@ -1,0 +1,25 @@
+{
+  "name": "qa-automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:chrome" : "playwright test --config=playwright.config.ts --project=Chromium --reporter=list",
+    "test:firefox" : "playwright test --config=playwright.config.ts --project=Firefox --reporter=list",
+    "test:webkit" : "playwright test --config=playwright.config.ts --project=webkit --reporter=list",
+    "test:e2e" : "playwright test --config=e2e.config.ts --project=Chromium --reporter=list",
+    "test:api": "playwright test --config=api.config.ts --project=Chromium --reporter=list",
+    "jenkins-server" : "java -jar jenkins.war --httpPort=8080 --enable-future-java"
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.41.2",
+    "@types/node": "^20.11.17"
+  },
+  "dependencies": {
+    "prettier": "^3.2.5"
+  }
+}
